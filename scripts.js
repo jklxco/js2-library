@@ -23,6 +23,8 @@ function updateLibraryTable(){
                 let newCell = document.createElement('button');
                 newCell.innerText = book[property];
                 newCell.dataset.readButton = '';
+                newCell.classList.add('read-button');
+                (book[property] === 'READ') ? newCell.classList.add('read') : 0; 
                 newCell.addEventListener('click', toggleReadStatus);
                 newRow.appendChild(newCell)
             } else {

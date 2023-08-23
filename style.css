@@ -18,7 +18,14 @@ body {
 }
 
 #container {
-    width: min(80%, 1000px);
+    width: 80%;
+    margin-top: 3rem;
+}
+
+#btn-new-book {
+    padding: 0.5rem;
+    margin: 1rem 0rem;
+
 }
 
 dialog {
@@ -27,10 +34,61 @@ dialog {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    
 }
 
+dialog::backdrop {
+    background-color: rgba(0,0,0,0.5);
+}
+
+dialog > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog > form > * {
+    appearance: none;
+    border: none;
+    margin: 0.1rem;
+}
+
+dialog > form > p > label {
+    font-size: 0.8rem;
+    margin-bottom: 0.15rem;
+}
+
+form > p {
+    display: flex;
+    flex-direction: column;
+}
+
+form > * {
+    padding: 0.25rem;
+}
+
+form input {
+    padding: 0.3rem;
+}
+
+form input:focus {
+    outline: none;
+    border: 3px solid orangered;
+}
+
+form > button {
+    padding: 0.5rem;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+
+
 table {
-    width: 100%;
+    width: clamp(450px, 100%, 1000px);
     margin-top: 1rem;
     border-collapse: collapse;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
@@ -89,4 +147,12 @@ td {
 .read-button.read {
     color: green;
     border: 2px solid green;
+}
+
+i {
+    color: orangered
+}
+
+i:hover {
+    color: rgba(0,0,0,0.25)
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" async defer></script>
+    <script src="https://kit.fontawesome.com/ce51236bc9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Library Project:</h1>
+        
+        <button id ='btn-new-book' data-btn-new-book>NEW BOOK</button>
+        <dialog id="newBookDialog" data-dialog-new-book>
+            <form>
+                <p>
+                    <label for="title">Title</label>
+                    <input type="text" id="title">
+                </p>
+                <p>
+                    <label for="author">Author</label>
+                    <input type="text" id="author">
+                </p>
+                <p>
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" min="0">
+                </p>
+                <fieldset>
+                    <label for="read">Read</label>
+                    <input type="radio" id="read" name="readStatus" value="read">
+                    <label for="unread">Not Read</label>
+                    <input type="radio" id="unread" name="readStatus" value="not read" checked>
+                </fieldset>
+                <button id='btn-add-book' data-add-book>Add Book</button>
+            </form>
+        </dialog>
+        <table>
+            <thead>
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Pages</td>
+                    <td>Read?</td>
+                    <td>...</td>
+                </tr>
+            </thead>
+            <tbody>
+                <td>Example Title</td>
+                <td>Example Author</td>
+                <td>Example Pages</td>
+                <td>Example Read</td>
+                <td>...</td>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
